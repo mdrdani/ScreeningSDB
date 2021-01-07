@@ -40,22 +40,22 @@
                                 <select class="form-select" name="status_tamu" aria-label="Default select example" required>
                                     <option></option>
                                     <option value="Tamu">Tamu</option>
-                                    <option value="DepNTK">Dep. NTK</option>
-                                    <option value="DepSD">Dep. SD</option>
-                                    <option value="DepSMP">Dep. SMP</option>
-                                    <option value="DepSMA">Dep. SMA</option>
-                                    <option value="DepHR">Dep. HR</option>
-                                    <option value="DepIT">Dep. IT</option>
-                                    <option value="DepLegal">Dep. Legal</option>
-                                    <option value="DepHM">Dep. HM</option>
-                                    <option value="DepFinance">Dep. Finance & Acc</option>
-                                    <option value="DepAcadsa">Dep. Acadsa</option>
-                                    <option value="DepMaintenance">Dep. Maintenance</option>
-                                    <option value="DepFacility">Dep. Facility</option>
-                                    <option value="DepUsaha">Dep. Unit Usaha</option>
-                                    <option value="DepMarketing">Dep. Marketing</option>
-                                    <option value="DepSC">Dep. Student Center</option>
-                                    <option value="DepLibrary">Dep. Library</option>
+                                    <option value="Dep NTK">Dep. NTK</option>
+                                    <option value="Dep SD">Dep. SD</option>
+                                    <option value="Dep SMP">Dep. SMP</option>
+                                    <option value="Dep SMA">Dep. SMA</option>
+                                    <option value="Dep HR">Dep. HR</option>
+                                    <option value="Dep IT">Dep. IT</option>
+                                    <option value="Dep Legal">Dep. Legal</option>
+                                    <option value="Dep HM">Dep. HM</option>
+                                    <option value="Dep Finance">Dep. Finance & Acc</option>
+                                    <option value="Dep Acadsa">Dep. Acadsa</option>
+                                    <option value="Dep Maintenance">Dep. Maintenance</option>
+                                    <option value="Dep Facility">Dep. Facility</option>
+                                    <option value="Dep Usaha">Dep. Unit Usaha</option>
+                                    <option value="Dep Marketing">Dep. Marketing</option>
+                                    <option value="Dep SC">Dep. Student Center</option>
+                                    <option value="Dep Library">Dep. Library</option>
                                 </select>
                             </div>
                             <div class="mb-3">

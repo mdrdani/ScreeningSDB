@@ -31,6 +31,28 @@
                                 <div class="col-md-6 mb-2">
                                     <input type="date" class="form-control" name="tanggal">
                                 </div>
+                                <div class="col-md-4 mb-2">
+                                    <select name="status_tamu" id="" class="form-control">
+                                        <option value="">Pilih Status</option>
+                                        <option value="Tamu" <?php if ($status_tamu=="Tamu"){ echo "selected"; } ?>>Tamu</option>
+                                        <option value="Dep NTK">Dep. NTK</option>
+                                        <option value="Dep SD">Dep. SD</option>
+                                        <option value="Dep SMP">Dep. SMP</option>
+                                        <option value="Dep SMA">Dep. SMA</option>
+                                        <option value="Dep HR">Dep. HR</option>
+                                        <option value="Dep IT">Dep. IT</option>
+                                        <option value="Dep Legal">Dep. Legal</option>
+                                        <option value="Dep HM">Dep. HM</option>
+                                        <option value="Dep Finance">Dep. Finance & Acc</option>
+                                        <option value="Dep Acadsa">Dep. Acadsa</option>
+                                        <option value="Dep Maintenance">Dep. Maintenance</option>
+                                        <option value="Dep Facility">Dep. Facility</option>
+                                        <option value="Dep Usaha">Dep. Unit Usaha</option>
+                                        <option value="Dep Marketing">Dep. Marketing</option>
+                                        <option value="Dep SC">Dep. Student Center</option>
+                                        <option value="Dep Library">Dep. Library</option>
+                                    </select>
+                                </div>
                                 <div class="col-md-2">
                                     <input class="form-control bg-success text-white" type="submit" value="FILTER">
                                 </div>
@@ -71,7 +93,7 @@
                                         while($user = mysqli_fetch_array($data_user)){
                                             echo "<tr>";
                                                 echo "<td>".$nomor++."</td>";
-                                                echo "<td>".$user['full_name']."</td>";
+                                                echo "<td>". ucwords($user['full_name']) ."</td>";
                                                 echo "<td>". date("d F Y",strtotime($user['tanggal']))."</td>";
                                                 echo "<td>".$user['status_tamu']."</td>";
                                                 echo "<td>"."<a href='proses_print.php?id=$user[id]' class='btn btn-primary btn-sm' target='blank_'>Show</a>"."</td>";

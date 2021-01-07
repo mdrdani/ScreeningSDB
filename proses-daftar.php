@@ -1,13 +1,5 @@
 <?php 
-// include("config.php");
-$server = "localhost";
-$user = "k1286260_lulus";
-$password = "Jer4pahSDB123";
-$nama_database = "k1286260_covid19";
-
-$db = mysqli_connect($server, $user, $password, $nama_database);
-
-
+include("config.php");
 
 // cek apakah tombol simpan sudah di klik atau belum
 if(isset($_POST['daftar'])){
