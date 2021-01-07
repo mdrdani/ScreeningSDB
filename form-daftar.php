@@ -37,8 +37,26 @@
                             </div>
                             <div class="mb-3">
                                 <label for="status_tamu" class="form-label">Status Tamu</label>
-                                <input type="text" name="status_tamu" class="form-control" id="status_tamu"
-                                    placeholder="Karyawan/Karyawati bila dari SDB" required>
+                                <select class="form-select" name="status_tamu" aria-label="Default select example" required>
+                                    <option></option>
+                                    <option value="Tamu">Tamu</option>
+                                    <option value="DepNTK">Dep. NTK</option>
+                                    <option value="DepSD">Dep. SD</option>
+                                    <option value="DepSMP">Dep. SMP</option>
+                                    <option value="DepSMA">Dep. SMA</option>
+                                    <option value="DepHR">Dep. HR</option>
+                                    <option value="DepIT">Dep. IT</option>
+                                    <option value="DepLegal">Dep. Legal</option>
+                                    <option value="DepHM">Dep. HM</option>
+                                    <option value="DepFinance">Dep. Finance & Acc</option>
+                                    <option value="DepAcadsa">Dep. Acadsa</option>
+                                    <option value="DepMaintenance">Dep. Maintenance</option>
+                                    <option value="DepFacility">Dep. Facility</option>
+                                    <option value="DepUsaha">Dep. Unit Usaha</option>
+                                    <option value="DepMarketing">Dep. Marketing</option>
+                                    <option value="DepSC">Dep. Student Center</option>
+                                    <option value="DepLibrary">Dep. Library</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <label for="tujuan" class="form-label">Tujuan</label>
