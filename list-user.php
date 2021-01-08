@@ -103,7 +103,7 @@
                                 </thead>
                                 <tbody>
                                     <?php 
-                                        $batas = 10;
+                                        $batas = 15;
                                         $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
                                         $halaman_awal = ($halaman > 1)? ($halaman * $batas) - $batas :0;
 
@@ -116,53 +116,64 @@
                                         $total_halaman = ceil($jumlah_data / $batas);
 
                                         if(isset($_GET['tanggal'])){
-                                            $tgl = $_GET['tanggal'];
-                                            $status = $_GET['status_tamu'];
-                                            $data_user = mysqli_query($db, "SELECT * FROM data_user WHERE tanggal='$tgl' OR status_tamu='$status' ORDER BY id DESC LIMIT $halaman_awal, $batas");
-                                            $nomor = $halaman_awal + 1 ;
-                                            while($user = mysqli_fetch_array($data_user)){
-                                                echo "<tr>";
-                                                    echo "<td>".$nomor++."</td>";
-                                                    echo "<td>". ucwords($user['full_name']) ."</td>";
-                                                    echo "<td>". date("d F Y",strtotime($user['tanggal']))."</td>";
-                                                    echo "<td>".$user['status_tamu']."</td>";
-                                                    echo "<td>"."<a href='proses_print.php?id=$user[id]' class='btn btn-primary btn-sm' target='blank_'>Show</a>"."</td>";
-                                                echo "</tr>";
+                                            if(isset($_GET['status_tamu'])){
+
+                                                $tgl = $_GET['tanggal'];
+                                                $status = $_GET['status_tamu'];
+                                                $data_user_filter = mysqli_query($db, "SELECT * FROM data_user WHERE tanggal='$tgl' OR status_tamu='$status' ORDER BY id DESC LIMIT 30");
+
+                                                $nomor = $halaman_awal + 1 ;
+                                                while($user = mysqli_fetch_array($data_user_filter)){
+                                                    echo "<tr>";
+                                                        echo "<td>".$nomor++."</td>";
+                                                        echo "<td>". ucwords($user['full_name']) ."</td>";
+                                                        echo "<td>". date("d F Y",strtotime($user['tanggal']))."</td>";
+                                                        echo "<td>".$user['status_tamu']."</td>";
+                                                        echo "<td>"."<a href='proses_print.php?id=$user[id]' class='btn btn-primary btn-sm' target='blank_'>Show</a>"."</td>";
+                                                    echo "</tr>";
+                                                }
                                             }
                                         }else{
                                             $data_user = mysqli_query($db, "SELECT * FROM data_user ORDER BY id DESC LIMIT $halaman_awal, $batas");
-                                            $nomor = $halaman_awal + 1 ;
-                                            while($user = mysqli_fetch_array($data_user)){
-                                                echo "<tr>";
-                                                    echo "<td>".$nomor++."</td>";
-                                                    echo "<td>". ucwords($user['full_name']) ."</td>";
-                                                    echo "<td>". date("d F Y",strtotime($user['tanggal']))."</td>";
-                                                    echo "<td>".$user['status_tamu']."</td>";
-                                                    echo "<td>"."<a href='proses_print.php?id=$user[id]' class='btn btn-primary btn-sm' target='blank_'>Show</a>"."</td>";
-                                                echo "</tr>";
-                                            }
+                                        }
+
+                                        $nomor = $halaman_awal + 1 ;
+                                        while($user = mysqli_fetch_array($data_user)){
+                                            echo "<tr>";
+                                                echo "<td>".$nomor++."</td>";
+                                                echo "<td>". ucwords($user['full_name']) ."</td>";
+                                                echo "<td>". date("d F Y",strtotime($user['tanggal']))."</td>";
+                                                echo "<td>".$user['status_tamu']."</td>";
+                                                echo "<td>"."<a href='proses_print.php?id=$user[id]' class='btn btn-primary btn-sm' target='blank_'>Show</a>"."</td>";
+                                            echo "</tr>";
                                         }
                                     ?>
                                 </tbody>
                             </table>
+                            <?php if(isset($_GET['tanggal'])){
+                                if(isset($_GET['status_tamu'])){ ?>
+
+                            <?php  } ?>
+                            <?php }else{?>
                             <nav aria-label="Page navigation example">
                                 <ul class="pagination">
                                     <li class="page-item"><a class="page-link"
                                             <?php if($halaman > 1){ echo "href='?halaman=$Previous'"; } ?>>Previous</a>
                                     </li>
                                     <?php 
-                                    for($x=1; $x<=$total_halaman; $x++){
-                                        ?>
+                                        for($x=1; $x<=$total_halaman; $x++){
+                                            ?>
                                     <li class="page-item"><a class="page-link"
                                             href="?halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
                                     <?php
-                                    }
-                                    ?>
+                                        }
+                                        ?>
                                     <li class="page-item"><a class="page-link"
                                             <?php if($halaman < $total_halaman) { echo "href='?halaman=$next'"; } ?>>Next</a>
                                     </li>
                                 </ul>
                             </nav>
+                            <?php } ?>
                         </div>
                         <a href="index.php" class="btn btn-primary">Back</a>
                     </div>
