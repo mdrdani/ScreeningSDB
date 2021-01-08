@@ -115,12 +115,10 @@
                                         $jumlah_data = mysqli_num_rows($query);
                                         $total_halaman = ceil($jumlah_data / $batas);
 
-                                        if(isset($_GET['tanggal'])){
-                                            if(isset($_GET['status_tamu'])){
-
+                                        if(isset($_GET['tanggal']) and isset($_GET['status_tamu'])){
                                                 $tgl = $_GET['tanggal'];
                                                 $status = $_GET['status_tamu'];
-                                                $data_user_filter = mysqli_query($db, "SELECT * FROM data_user WHERE tanggal='$tgl' OR status_tamu='$status' ORDER BY id DESC LIMIT 30");
+                                                $data_user_filter = mysqli_query($db, "SELECT * FROM data_user WHERE tanggal='$tgl' AND status_tamu='$status' ORDER BY id DESC");
 
                                                 $nomor = $halaman_awal + 1 ;
                                                 while($user = mysqli_fetch_array($data_user_filter)){
@@ -132,7 +130,7 @@
                                                         echo "<td>"."<a href='proses_print.php?id=$user[id]' class='btn btn-primary btn-sm' target='blank_'>Show</a>"."</td>";
                                                     echo "</tr>";
                                                 }
-                                            }
+                                            
                                         }else{
                                             $data_user = mysqli_query($db, "SELECT * FROM data_user ORDER BY id DESC LIMIT $halaman_awal, $batas");
                                         }
