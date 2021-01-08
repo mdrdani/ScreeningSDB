@@ -1,9 +1,9 @@
 <?php
 
 $server = "localhost";
-$user = "root";
-$password = "mypassword";
-$nama_database = "k1286260_covid19";
+$user = "dani";
+$password = "secret";
+$nama_database = "coronasdb";
 
 $db = mysqli_connect($server, $user, $password, $nama_database);
 

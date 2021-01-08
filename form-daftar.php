@@ -37,25 +37,32 @@
                             </div>
                             <div class="mb-3">
                                 <label for="status_tamu" class="form-label">Status Tamu</label>
-                                <select class="form-select" name="status_tamu" aria-label="Default select example" required>
+                                <select class="form-select" name="status_tamu" aria-label="Default select example"
+                                    required>
                                     <option></option>
                                     <option value="Tamu">Tamu</option>
-                                    <option value="Dep NTK">Dep. NTK</option>
-                                    <option value="Dep SD">Dep. SD</option>
-                                    <option value="Dep SMP">Dep. SMP</option>
-                                    <option value="Dep SMA">Dep. SMA</option>
-                                    <option value="Dep HR">Dep. HR</option>
-                                    <option value="Dep IT">Dep. IT</option>
-                                    <option value="Dep Legal">Dep. Legal</option>
-                                    <option value="Dep HM">Dep. HM</option>
-                                    <option value="Dep Finance">Dep. Finance & Acc</option>
-                                    <option value="Dep Acadsa">Dep. Acadsa</option>
-                                    <option value="Dep Maintenance">Dep. Maintenance</option>
-                                    <option value="Dep Facility">Dep. Facility</option>
-                                    <option value="Dep Usaha">Dep. Unit Usaha</option>
-                                    <option value="Dep Marketing">Dep. Marketing</option>
-                                    <option value="Dep SC">Dep. Student Center</option>
-                                    <option value="Dep Library">Dep. Library</option>
+                                    <optgroup label="Akademik">
+                                        <option value="Dep NTK">Dep. NTK</option>
+                                        <option value="Dep SD">Dep. SD</option>
+                                        <option value="Dep SMP">Dep. SMP</option>
+                                        <option value="Dep SMA">Dep. SMA</option>
+                                    </optgroup>
+                                    <optgroup label="Non-Akademik">
+                                        <option value="Dep HM">Dep. Headmaster</option>
+                                        <option value="Dep Psychology">Dep. Psychology</option>
+                                        <option value="Dep HR">Dep. HR</option>
+                                        <option value="Dep IT">Dep. IT</option>
+                                        <option value="Dep Legal">Dep. Legal</option>
+                                        <option value="Dep Finance">Dep. Finance & Acc</option>
+                                        <option value="Dep Acadsa">Dep. Acadsa</option>
+                                        <option value="Dep Maintenance">Dep. Maintenance</option>
+                                        <option value="Dep Facility">Dep. Facility</option>
+                                        <option value="Dep Usaha">Dep. Unit Usaha</option>
+                                        <option value="Dep Marketing">Dep. Marketing</option>
+                                        <option value="Dep SC">Dep. Student Center</option>
+                                        <option value="Dep Library">Dep. Library</option>
+                                        <option value="Security">Security</option>
+                                    </optgroup>
                                 </select>
                             </div>
                             <div class="mb-3">
@@ -72,7 +79,8 @@
                                 <label for="pertanyaan_1" class="form-label">1. Apakah dalam waktu 14 hari terakhir Anda
                                     atau anggota keluarga di rumah pernah mengalami demam dengan suhu lebih dari 37.5
                                     C?</label>
-                                <select class="form-select" name="pertanyaan_1" aria-label="Default select example" required>
+                                <select class="form-select" name="pertanyaan_1" aria-label="Default select example"
+                                    required>
                                     <option></option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
@@ -83,20 +91,22 @@
                                 <label for="pertanyaan_2" class="form-label">2. Apakah dalam waktu 14 hari terakhir Anda
                                     atau anggota keluarga di rumah mengalami
                                     <ul>
-                                    <li>Batuk</li>
-                                    <li>Pilek</li>
-                                    <li>Nyeri Tenggorokan</li>
-                                    <li>Sesak Nafas</li>
-                                    <li>Delirium</li>
-                                    <li>Kelelahan</li>
-                                    <li>Sakit Mata</li>
-                                    <li>Masalah Pencernaan</li>
-                                    <li>Nyeri Otot</li>
-                                    <li>Ruam Kulit</li>
-                                    <li>Masalah Penciuman</li>
-                                    <li>Masalah Indera Perasa</li>
-                                    </ul></label>
-                                <select class="form-select" name="pertanyaan_2" aria-label="Default select example" required>
+                                        <li>Batuk</li>
+                                        <li>Pilek</li>
+                                        <li>Nyeri Tenggorokan</li>
+                                        <li>Sesak Nafas</li>
+                                        <li>Delirium</li>
+                                        <li>Kelelahan</li>
+                                        <li>Sakit Mata</li>
+                                        <li>Masalah Pencernaan</li>
+                                        <li>Nyeri Otot</li>
+                                        <li>Ruam Kulit</li>
+                                        <li>Masalah Penciuman</li>
+                                        <li>Masalah Indera Perasa</li>
+                                    </ul>
+                                </label>
+                                <select class="form-select" name="pertanyaan_2" aria-label="Default select example"
+                                    required>
                                     <option></option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
@@ -107,7 +117,8 @@
                                 <label for="pertanyaan_3" class="form-label">3. Apakah dalam waktu 14 hari terakhir Anda
                                     atau anggota keluarga di rumah pernah melakukan perjalanan ke luar negeri/ke kota
                                     lain? </label>
-                                <select class="form-select" name="pertanyaan_3" aria-label="Default select example" required>
+                                <select class="form-select" name="pertanyaan_3" aria-label="Default select example"
+                                    required>
                                     <option></option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
@@ -126,7 +137,8 @@
                                 <label for="pertanyaan_5" class="form-label">5. Apakah dalam waktu 14 hari terakhir Anda
                                     atau anggota keluarga di rumah pernah melakukan kontak dengan orang yang termasuk
                                     kasus konfirmasi positif Covid-19? </label>
-                                <select class="form-select" name="pertanyaan_5" aria-label="Default select example" required>
+                                <select class="form-select" name="pertanyaan_5" aria-label="Default select example"
+                                    required>
                                     <option></option>
                                     <option value="Ya">Ya</option>
                                     <option value="Tidak">Tidak</option>
