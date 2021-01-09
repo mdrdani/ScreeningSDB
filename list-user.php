@@ -36,53 +36,75 @@
                                         <option value="">Pilih Status</option>
                                         <option value="Tamu" <?php if ($status_tamu=="Tamu"){ echo "selected"; } ?>>Tamu
                                         </option>
-                                        <option value="Dep NTK"
-                                            <?php if ($status_tamu=="Dep NTK"){ echo "selected"; } ?>>Dep. NTK</option>
-                                        <option value="Dep SD" <?php if ($status_tamu=="Dep SD"){ echo "selected"; } ?>>
-                                            Dep. SD</option>
-                                        <option value="Dep SMP"
-                                            <?php if ($status_tamu=="Dep SMP"){ echo "selected"; } ?>>Dep. SMP</option>
-                                        <option value="Dep SMA"
-                                            <?php if ($status_tamu=="Dep SMA"){ echo "selected"; } ?>>Dep. SMA</option>
-                                        <option value="Dep HM" <?php if ($status_tamu=="Dep HM"){ echo "selected"; } ?>>
-                                            Dep. Headmaster</option>
-                                        <option value="Dep HR" <?php if ($status_tamu=="Dep HR"){ echo "selected"; } ?>>
-                                            Dep. HR</option>
-                                        <option value="Dep IT" <?php if ($status_tamu=="Dep IT"){ echo "selected"; } ?>>
-                                            Dep. IT</option>
-                                        <option value="Dep Psychology"
-                                            <?php if ($status_tamu=="Dep Psychology"){ echo "selected"; } ?>>Dep.
-                                            Psychology
-                                        </option>
-                                        <option value="Dep Legal"
-                                            <?php if ($status_tamu=="Dep Legal"){ echo "selected"; } ?>>Dep. Legal
-                                        </option>
-                                        <option value="Dep Finance"
-                                            <?php if ($status_tamu=="Dep Finance"){ echo "selected"; } ?>>Dep. Finance &
-                                            Acc</option>
-                                        <option value="Dep Acadsa"
-                                            <?php if ($status_tamu=="Dep Acadsa"){ echo "selected"; } ?>>Dep. Acadsa
-                                        </option>
-                                        <option value="Dep Maintenance"
-                                            <?php if ($status_tamu=="Dep Maintenance"){ echo "selected"; } ?>>Dep.
-                                            Maintenance</option>
-                                        <option value="Dep Facility"
-                                            <?php if ($status_tamu=="Dep Facility"){ echo "selected"; } ?>>Dep. Facility
-                                        </option>
-                                        <option value="Dep Usaha"
-                                            <?php if ($status_tamu=="Dep Usaha"){ echo "selected"; } ?>>Dep. Unit Usaha
-                                        </option>
-                                        <option value="Dep Marketing"
-                                            <?php if ($status_tamu=="Dep Marketing"){ echo "selected"; } ?>>Dep.
-                                            Marketing</option>
-                                        <option value="Dep SC" <?php if ($status_tamu=="Dep SC"){ echo "selected"; } ?>>
-                                            Dep. Student Center</option>
-                                        <option value="Dep Library"
-                                            <?php if ($status_tamu=="Dep Library"){ echo "selected"; } ?>>Dep. Library
-                                        </option>
-                                        <option value="Security"
-                                            <?php if ($status_tamu=="Security"){ echo "selected"; } ?>>Security
-                                        </option>
+
+                                        <optgroup label="Akademik">
+                                            <option value="Dep NTK"
+                                                <?php if ($status_tamu=="Dep NTK"){ echo "selected"; } ?>>Dep. NTK
+                                            </option>
+                                            <option value="Dep SD"
+                                                <?php if ($status_tamu=="Dep SD"){ echo "selected"; } ?>>
+                                                Dep. SD</option>
+                                            <option value="Dep SMP"
+                                                <?php if ($status_tamu=="Dep SMP"){ echo "selected"; } ?>>Dep. SMP
+                                            </option>
+                                            <option value="Dep SMA"
+                                                <?php if ($status_tamu=="Dep SMA"){ echo "selected"; } ?>>Dep. SMA
+                                            </option>
+                                        </optgroup>
+
+                                        <optgroup label="Non-Akademik">
+                                            <option value="Dep HM"
+                                                <?php if ($status_tamu=="Dep HM"){ echo "selected"; } ?>>
+                                                Dep. Headmaster</option>
+                                            <option value="Dep HR"
+                                                <?php if ($status_tamu=="Dep HR"){ echo "selected"; } ?>>
+                                                Dep. HR</option>
+                                            <option value="Dep Legal"
+                                                <?php if ($status_tamu=="Dep Legal"){ echo "selected"; } ?>>Dep. Legal
+                                            </option>
+                                            <option value="Dep Acad Adviser"
+                                                <?php if ($status_tamu=="Dep Acad Adviser"){ echo "selected"; } ?>>Dep
+                                                Acad Adviser
+                                            </option>
+                                            <option value="Dep IT"
+                                                <?php if ($status_tamu=="Dep IT"){ echo "selected"; } ?>>
+                                                Dep. IT</option>
+                                            <option value="Dep Psychology"
+                                                <?php if ($status_tamu=="Dep Psychology"){ echo "selected"; } ?>>Dep.
+                                                Psychology
+                                            </option>
+                                            <option value="Dep Finance"
+                                                <?php if ($status_tamu=="Dep Finance"){ echo "selected"; } ?>>Dep.
+                                                Finance &
+                                                Acc</option>
+                                            <option value="Dep Acadsa"
+                                                <?php if ($status_tamu=="Dep Acadsa"){ echo "selected"; } ?>>Dep. Acadsa
+                                            </option>
+                                            <option value="Dep Maintenance"
+                                                <?php if ($status_tamu=="Dep Maintenance"){ echo "selected"; } ?>>Dep.
+                                                Maintenance</option>
+                                            <option value="Dep Facility"
+                                                <?php if ($status_tamu=="Dep Facility"){ echo "selected"; } ?>>Dep.
+                                                Facility
+                                            </option>
+                                            <option value="Dep Usaha"
+                                                <?php if ($status_tamu=="Dep Usaha"){ echo "selected"; } ?>>Dep. Unit
+                                                Usaha
+                                            </option>
+                                            <option value="Dep Marketing"
+                                                <?php if ($status_tamu=="Dep Marketing"){ echo "selected"; } ?>>Dep.
+                                                Marketing</option>
+                                            <option value="Dep SC"
+                                                <?php if ($status_tamu=="Dep SC"){ echo "selected"; } ?>>
+                                                Dep. Student Center</option>
+                                            <option value="Dep Library"
+                                                <?php if ($status_tamu=="Dep Library"){ echo "selected"; } ?>>Dep.
+                                                Library
+                                            </option>
+                                            <option value="Security"
+                                                <?php if ($status_tamu=="Security"){ echo "selected"; } ?>>Security
+                                            </option>
+                                        </optgroup>
                                     </select>
                                 </div>
                                 <div class="col-md-2">

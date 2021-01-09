@@ -49,11 +49,12 @@
                                     </optgroup>
                                     <optgroup label="Non-Akademik">
                                         <option value="Dep HM">Dep. Headmaster</option>
-                                        <option value="Dep Psychology">Dep. Psychology</option>
                                         <option value="Dep HR">Dep. HR</option>
-                                        <option value="Dep IT">Dep. IT</option>
                                         <option value="Dep Legal">Dep. Legal</option>
+                                        <option value="Dep Acad Adviser">Dep. Acad. Adviser</option>
                                         <option value="Dep Finance">Dep. Finance & Acc</option>
+                                        <option value="Dep Psychology">Dep. Psychology</option>
+                                        <option value="Dep IT">Dep. IT</option>
                                         <option value="Dep Acadsa">Dep. Acadsa</option>
                                         <option value="Dep Maintenance">Dep. Maintenance</option>
                                         <option value="Dep Facility">Dep. Facility</option>
