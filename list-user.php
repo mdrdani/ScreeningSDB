@@ -174,26 +174,56 @@
                                 if(isset($_GET['status_tamu'])){ ?>
 
                             <?php  } ?>
-                            <?php }else{?>
+                            <?php }else{ 
+                            if (ceil($jumlah_data / $batas) > 0): ?>
                             <nav aria-label="Page navigation example">
                                 <ul class="pagination">
+                                    <?php if ($halaman > 1): ?>
                                     <li class="page-item"><a class="page-link"
-                                            <?php if($halaman > 1){ echo "href='?halaman=$Previous'"; } ?>>Previous</a>
+                                            href="list-user.php?halaman=<?php echo $halaman-1 ?>">Prev</a>
                                     </li>
-                                    <?php 
-                                        for($x=1; $x<=$total_halaman; $x++){
-                                            ?>
+                                    <?php endif; ?>
+
+                                    <?php if ($halaman > 3): ?>
+                                    <li class="page-item"><a class="page-link" href="list-user.php?halaman=1">1</a></li>
+                                    <li class="page-item"><a class="page-link">...</a></li>
+                                    <?php endif; ?>
+
+                                    <?php if ($halaman-2 > 0): ?><li class="page-item"><a class="page-link"
+                                            href="list-user.php?halaman=<?php echo $halaman-2 ?>"><?php echo $halaman-2 ?></a>
+                                    </li><?php endif; ?>
+                                    <?php if ($halaman-1 > 0): ?><li class="page-item"><a class="page-link"
+                                            href="list-user.php?halaman=<?php echo $halaman-1 ?>"><?php echo $halaman-1 ?></a>
+                                    </li><?php endif; ?>
+
                                     <li class="page-item"><a class="page-link"
-                                            href="?halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
-                                    <?php
-                                        }
-                                        ?>
-                                    <li class="page-item"><a class="page-link"
-                                            <?php if($halaman < $total_halaman) { echo "href='?halaman=$next'"; } ?>>Next</a>
+                                            href="list-user.php?halaman=<?php echo $halaman ?>"><?php echo $halaman ?></a>
                                     </li>
+
+                                    <?php if ($halaman+1 < ceil($jumlah_data / $batas)+1): ?><li class="page-item"><a
+                                            class="page-link"
+                                            href="list-user.php?halaman=<?php echo $halaman+1 ?>"><?php echo $halaman+1 ?></a>
+                                    </li><?php endif; ?>
+                                    <?php if ($halaman+2 < ceil($jumlah_data / $batas)+1): ?><li class="page-item"><a
+                                            class="page-link"
+                                            href="list-user.php?halaman=<?php echo $halaman+2 ?>"><?php echo $halaman+2 ?></a>
+                                    </li><?php endif; ?>
+
+                                    <?php if ($halaman < ceil($jumlah_data / $batas)-2): ?>
+                                    <li class="page-item"><a class="page-link">...</a></li>
+                                    <li class="page-item"><a class="page-link"
+                                            href="list-user.php?halaman=<?php echo ceil($jumlah_data / $batas) ?>"><?php echo ceil($jumlah_data / $batas) ?></a>
+                                    </li>
+                                    <?php endif; ?>
+
+                                    <?php if ($halaman < ceil($jumlah_data / $batas)): ?>
+                                    <li class="page-item"><a class="page-link"
+                                            href="list-user.php?halaman=<?php echo $halaman+1 ?>">Next</a>
+                                    </li>
+                                    <?php endif; ?>
                                 </ul>
                             </nav>
-                            <?php } ?>
+                            <?php endif;} ?>
                         </div>
                         <a href="index.php" class="btn btn-primary">Back</a>
                     </div>
