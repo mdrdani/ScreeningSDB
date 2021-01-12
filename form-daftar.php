@@ -39,7 +39,7 @@
                                 <label for="status_tamu" class="form-label">Status Tamu</label>
                                 <select class="form-select" name="status_tamu" aria-label="Default select example"
                                     required>
-                                    <option></option>
+                                    <option label="Selain Karyawan/i Silahkan Pilih Tamu"></option>
                                     <option value="Tamu">Tamu</option>
                                     <optgroup label="Akademik">
                                         <option value="Dep NTK">Dep. NTK</option>
@@ -75,7 +75,10 @@
                                 <label for="tanggal" class="form-label">Tanggal Kunjungan</label>
                                 <input class="form-control" name="tanggal" type="date" id="tanggal" required>
                             </div>
+
+                            <?php date_default_timezone_set('Asia/Jakarta'); ?>
                             <input value="<?php echo date("Y-m-d") ?>" name="tanggal_isi" type="hidden">
+                            
                             <div class="mb-3">
                                 <label for="pertanyaan_1" class="form-label">1. Apakah dalam waktu 14 hari terakhir Anda
                                     atau anggota keluarga di rumah pernah mengalami demam dengan suhu lebih dari 37.5
