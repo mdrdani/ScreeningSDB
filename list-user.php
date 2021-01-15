@@ -151,10 +151,10 @@
                                                         echo "<td>". date("d F Y",strtotime($user['tanggal']))."</td>";
                                                         echo "<td>".$user['status_tamu']."</td>";
                                                         if ($user['pertanyaan_1'] === 'Ya' || $user['pertanyaan_2'] === 'Ya' || $user['pertanyaan_3'] === 'Ya' || $user['pertanyaan_5'] === 'Ya') {
-                                                            echo "<td class='badge bg-danger'>Tidak</td>";
+                                                            echo "<td class='badge bg-danger'><i class='fas fa-exclamation-triangle'></i></td>";
                                                         } 
                                                         else {
-                                                            echo "<td></td>";
+                                                            echo "<td class='badge bg-success'><i class='fas fa-heart'></i></td>";
                                                         }
                                                         echo "<td>"."<a href='proses_print.php?id=$user[id]' class='btn btn-primary btn-sm' target='blank_'>Show</a>"."</td>";
                                                     echo "</tr>";
@@ -175,7 +175,7 @@
                                                     echo "<td class='badge bg-danger'><i class='fas fa-exclamation-triangle'></i></td>";
                                                 } 
                                                 else {
-                                                    echo "<td></td>";
+                                                    echo "<td class='badge bg-success'><i class='fas fa-heart'></i></td>";
                                                 }
                                                 echo "<td>"."<a href='proses_print.php?id=$user[id]' class='btn btn-primary btn-sm' target='blank_'>Show</a>"."</td>";
                                             echo "</tr>";
