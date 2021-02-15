@@ -1,4 +1,7 @@
-<?php include('config.php');?>
+<?php 
+include('config.php');
+include('tgl_indo.php');
+?>
 <!doctype html>
 <html lang="en">
 
@@ -147,7 +150,7 @@
                                                     echo "<tr>";
                                                         echo "<td>".$nomor++."</td>";
                                                         echo "<td>". ucwords($user['full_name']) ."</td>";
-                                                        echo "<td>". date("d F Y",strtotime($user['tanggal']))."</td>";
+                                                        echo "<td>". tgl_indo(date("Y-m-d",strtotime($user['tanggal'])))."</td>";
                                                         echo "<td>".$user['status_tamu']."</td>";
                                                         echo "<td>"."<a href='proses_print.php?id=$user[id]' class='btn btn-primary btn-sm' target='blank_'>Show</a>"."</td>";
                                                     echo "</tr>";
@@ -162,7 +165,7 @@
                                             echo "<tr>";
                                                 echo "<td>".$nomor++."</td>";
                                                 echo "<td>". ucwords($user['full_name']) ."</td>";
-                                                echo "<td>". date("d F Y",strtotime($user['tanggal']))."</td>";
+                                                echo "<td>". tgl_indo(date("Y-m-d",strtotime($user['tanggal'])))."</td>";
                                                 echo "<td>".$user['status_tamu']."</td>";
                                                 echo "<td>"."<a href='proses_print.php?id=$user[id]' class='btn btn-primary btn-sm' target='blank_'>Show</a>"."</td>";
                                             echo "</tr>";

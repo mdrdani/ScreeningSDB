@@ -16,6 +16,7 @@
 
 <?php 
 include 'config.php';
+include 'tgl_indo.php';
 
   $id = $_GET['id'];
 
@@ -38,18 +39,18 @@ include 'config.php';
 
                 <h3 class="text-center">HASIL SCREENING COVID-19</h3>
                 <h3 class="text-center">SEKOLAH DARMA BANGSA</h3>
-                <p style="text-align: right;">Di isi pada tanggal:
-                    <?php echo date("d F Y",strtotime($data['tanggal_isi'])) ?>
-                <p>Bapak/Ibu <?php echo ucwords($data['full_name']); ?>, Anda <b>DI IZINKAN</b> <?php echo $data['tujuan'] ?>
-                    pada <?php echo date("d F Y",strtotime($data['tanggal'])) ?> </p>
-                <p>Informasi yang saya berikan adalah benar dan sesuai dengan kondisi saya</p>
-                <p class="text-center"><u>SCREENSHOOT HASIL TES INI & TUNJUKAN KE BAGIAN SECURITY KETIKA DATANG</u></p>
-                <p>Terima Kasih Bapak/Ibu <?php echo $data['full_name']; ?> telah mengisi screening covid-19 ini
+                <p style="text-align: right;">Diisi pada tanggal:
+                <?php echo tgl_indo(date("Y-m-d",strtotime($user['tanggal_isi'])))?>
+                <p>Bapak/Ibu <?php echo ucwords($data['full_name']); ?>, Anda <b>DIIZINKAN</b> <?php echo strtolower($data['tujuan']) ?>
+                    pada <?php echo tgl_indo(date("Y-m-d",strtotime($user['tanggal'])))?>. </p>
+                <p>Informasi yang saya berikan adalah benar dan sesuai dengan kondisi saya.</p>
+                <p class="text-center"><u>SCREENSHOT HASIL TES INI & TUNJUKKAN KE BAGIAN SECURITY KETIKA DATANG</u></p>
+                <p>Terima kasih Bapak/Ibu <?php echo $data['full_name']; ?> telah mengisi screening covid-19 ini
                     dengan jujur dan
                     bertanggung
-                    jawab</p>
+                    jawab.</p>
                 <br>
-                <p style="text-align: right;">Salam, semoga anda sehat selalu dan terhindar dari bahaya Covid-19</p>
+                <p style="text-align: right;">Salam, semoga Anda sehat selalu dan terhindar dari bahaya Covid-19.</p>
                 <br>
                 <p style="text-align: right;">Ttd <br> Managemen Sekolah Darma Bangsa</p>
             </div>
