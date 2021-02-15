@@ -38,15 +38,9 @@ include 'tgl_indo.php';
                 <h4 style="text-align: left;">HASIL: TIDAK DIIZINKAN</h4>
                 <h3 class="text-center">HASIL SCREENING COVID-19</h3>
                 <h3 class="text-center">SEKOLAH DARMA BANGSA</h3>
-<<<<<<< HEAD
                 <p style="text-align: right;">Di isi pada tanggal:
                     <?php echo tgl_indo(date("Y-m-d",strtotime($data['tanggal_isi']))) ?>
                 <p>Bapak/Ibu <?php echo ucwords($data['full_name']); ?>, Anda <b>TIDAK DI IZINKAN</b> berkunjung ke Sekolah Darma
-=======
-                <p style="text-align: right;">Diisi pada tanggal:
-                <?php echo tgl_indo(date("Y-m-d",strtotime($user['tanggal_isi'])))?>
-                <p>Bapak/Ibu <?php echo ucwords($data['full_name']); ?>, Anda <b>TIDAK DIIZINKAN</b> berkunjung ke Sekolah Darma
->>>>>>> f7c2e5f4064aafee67faada06e64fd11c4fe83ef
                     Bangsa. <br>
                     Mohon untuk <u>melakukan isolasi mandiri selama 14 hari</u> dan berkonsultasi dengan dokter/tenaga
                     medis Anda.</p>

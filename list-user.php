@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 <?php include('config.php');
 include('tgl_indo.php');?>
-=======
-<?php 
-include('config.php');
-include('tgl_indo.php');
-?>
->>>>>>> f7c2e5f4064aafee67faada06e64fd11c4fe83ef
 <!doctype html>
 <html lang="en">
 

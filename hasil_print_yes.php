@@ -39,7 +39,6 @@ include 'tgl_indo.php';
 
                 <h3 class="text-center">HASIL SCREENING COVID-19</h3>
                 <h3 class="text-center">SEKOLAH DARMA BANGSA</h3>
-<<<<<<< HEAD
                 <p style="text-align: right;">Di isi pada tanggal:
                     <?php echo tgl_indo(date("Y-m-d",strtotime($data['tanggal_isi']))) ?>
                 <p>Bapak/Ibu <?php echo ucwords($data['full_name']); ?>, Anda <b>DI IZINKAN</b> <?php echo $data['tujuan'] ?>
@@ -47,15 +46,6 @@ include 'tgl_indo.php';
                 <p>Informasi yang saya berikan adalah benar dan sesuai dengan kondisi saya</p>
                 <p class="text-center"><u>SCREENSHOOT HASIL TES INI & TUNJUKAN KE BAGIAN SECURITY KETIKA DATANG</u></p>
                 <p>Terima Kasih Bapak/Ibu <?php echo $data['full_name']; ?> telah mengisi screening covid-19 ini
-=======
-                <p style="text-align: right;">Diisi pada tanggal:
-                <?php echo tgl_indo(date("Y-m-d",strtotime($user['tanggal_isi'])))?>
-                <p>Bapak/Ibu <?php echo ucwords($data['full_name']); ?>, Anda <b>DIIZINKAN</b> <?php echo strtolower($data['tujuan']) ?>
-                    pada <?php echo tgl_indo(date("Y-m-d",strtotime($user['tanggal'])))?>. </p>
-                <p>Informasi yang saya berikan adalah benar dan sesuai dengan kondisi saya.</p>
-                <p class="text-center"><u>SCREENSHOT HASIL TES INI & TUNJUKKAN KE BAGIAN SECURITY KETIKA DATANG</u></p>
-                <p>Terima kasih Bapak/Ibu <?php echo $data['full_name']; ?> telah mengisi screening covid-19 ini
->>>>>>> f7c2e5f4064aafee67faada06e64fd11c4fe83ef
                     dengan jujur dan
                     bertanggung
                     jawab.</p>
