@@ -123,6 +123,7 @@ include('tgl_indo.php');
                                         <th scope="col">Nama</th>
                                         <th scope="col">Tanggal Kunjungan</th>
                                         <th scope="col">Status Tamu</th>
+                                        <th scope="col">Hasil</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
@@ -152,6 +153,12 @@ include('tgl_indo.php');
                                                         echo "<td>". ucwords($user['full_name']) ."</td>";
                                                         echo "<td>". tgl_indo(date("Y-m-d",strtotime($user['tanggal'])))."</td>";
                                                         echo "<td>".$user['status_tamu']."</td>";
+                                                        if ($user['pertanyaan_1'] === 'Ya' || $user['pertanyaan_2'] === 'Ya' || $user['pertanyaan_3'] === 'Ya' || $user['pertanyaan_5'] === 'Ya') {
+                                                            echo "<td class='badge bg-danger'><i class='fas fa-exclamation-triangle'></i></td>";
+                                                        } 
+                                                        else {
+                                                            echo "<td class='badge bg-success'><i class='fas fa-heart'></i></td>";
+                                                        }
                                                         echo "<td>"."<a href='proses_print.php?id=$user[id]' class='btn btn-primary btn-sm' target='blank_'>Show</a>"."</td>";
                                                     echo "</tr>";
                                                 }
@@ -167,6 +174,12 @@ include('tgl_indo.php');
                                                 echo "<td>". ucwords($user['full_name']) ."</td>";
                                                 echo "<td>". tgl_indo(date("Y-m-d",strtotime($user['tanggal'])))."</td>";
                                                 echo "<td>".$user['status_tamu']."</td>";
+                                                if ($user['pertanyaan_1'] === 'Ya' || $user['pertanyaan_2'] === 'Ya' || $user['pertanyaan_3'] === 'Ya' || $user['pertanyaan_5'] === 'Ya') {
+                                                    echo "<td class='badge bg-danger'><i class='fas fa-exclamation-triangle'></i></td>";
+                                                } 
+                                                else {
+                                                    echo "<td class='badge bg-success'><i class='fas fa-heart'></i></td>";
+                                                }
                                                 echo "<td>"."<a href='proses_print.php?id=$user[id]' class='btn btn-primary btn-sm' target='blank_'>Show</a>"."</td>";
                                             echo "</tr>";
                                         }
@@ -244,6 +257,7 @@ include('tgl_indo.php');
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
     </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
