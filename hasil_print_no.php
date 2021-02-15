@@ -16,6 +16,7 @@
 
 <?php 
 include 'config.php';
+include 'tgl_indo.php';
 
   $id = $_GET['id'];
 
@@ -38,7 +39,7 @@ include 'config.php';
                 <h3 class="text-center">HASIL SCREENING COVID-19</h3>
                 <h3 class="text-center">SEKOLAH DARMA BANGSA</h3>
                 <p style="text-align: right;">Di isi pada tanggal:
-                    <?php echo date("d F Y",strtotime($data['tanggal_isi'])) ?>
+                    <?php echo tgl_indo(date("Y-m-d",strtotime($data['tanggal_isi']))) ?>
                 <p>Bapak/Ibu <?php echo ucwords($data['full_name']); ?>, Anda <b>TIDAK DI IZINKAN</b> berkunjung ke Sekolah Darma
                     Bangsa. <br>
                     Mohon untuk <u>melakukan isolasi mandiri selama 14 hari</u> dan berkonsultasi dengan dokter/tenaga

@@ -1,4 +1,5 @@
-<?php include('config.php');?>
+<?php include('config.php');
+include('tgl_indo.php');?>
 <!doctype html>
 <html lang="en">
 
@@ -148,7 +149,7 @@
                                                     echo "<tr>";
                                                         echo "<td>".$nomor++."</td>";
                                                         echo "<td>". ucwords($user['full_name']) ."</td>";
-                                                        echo "<td>". date("d F Y",strtotime($user['tanggal']))."</td>";
+                                                        echo "<td>". tgl_indo(date("Y-m-d",strtotime($user['tanggal'])))."</td>";
                                                         echo "<td>".$user['status_tamu']."</td>";
                                                         if ($user['pertanyaan_1'] === 'Ya' || $user['pertanyaan_2'] === 'Ya' || $user['pertanyaan_3'] === 'Ya' || $user['pertanyaan_5'] === 'Ya') {
                                                             echo "<td class='badge bg-danger'><i class='fas fa-exclamation-triangle'></i></td>";
@@ -169,7 +170,7 @@
                                             echo "<tr>";
                                                 echo "<td>".$nomor++."</td>";
                                                 echo "<td>". ucwords($user['full_name']) ."</td>";
-                                                echo "<td>". date("d F Y",strtotime($user['tanggal']))."</td>";
+                                                echo "<td>". tgl_indo(date("Y-m-d",strtotime($user['tanggal'])))."</td>";
                                                 echo "<td>".$user['status_tamu']."</td>";
                                                 if ($user['pertanyaan_1'] === 'Ya' || $user['pertanyaan_2'] === 'Ya' || $user['pertanyaan_3'] === 'Ya' || $user['pertanyaan_5'] === 'Ya') {
                                                     echo "<td class='badge bg-danger'><i class='fas fa-exclamation-triangle'></i></td>";

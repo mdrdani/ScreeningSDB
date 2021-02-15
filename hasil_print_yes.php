@@ -16,6 +16,7 @@
 
 <?php 
 include 'config.php';
+include 'tgl_indo.php';
 
   $id = $_GET['id'];
 
@@ -39,9 +40,9 @@ include 'config.php';
                 <h3 class="text-center">HASIL SCREENING COVID-19</h3>
                 <h3 class="text-center">SEKOLAH DARMA BANGSA</h3>
                 <p style="text-align: right;">Di isi pada tanggal:
-                    <?php echo date("d F Y",strtotime($data['tanggal_isi'])) ?>
+                    <?php echo tgl_indo(date("Y-m-d",strtotime($data['tanggal_isi']))) ?>
                 <p>Bapak/Ibu <?php echo ucwords($data['full_name']); ?>, Anda <b>DI IZINKAN</b> <?php echo $data['tujuan'] ?>
-                    pada <?php echo date("d F Y",strtotime($data['tanggal'])) ?> </p>
+                    pada <?php echo tgl_indo(date("Y-m-d",strtotime($data['tanggal']))) ?> </p>
                 <p>Informasi yang saya berikan adalah benar dan sesuai dengan kondisi saya</p>
                 <p class="text-center"><u>SCREENSHOOT HASIL TES INI & TUNJUKAN KE BAGIAN SECURITY KETIKA DATANG</u></p>
                 <p>Terima Kasih Bapak/Ibu <?php echo $data['full_name']; ?> telah mengisi screening covid-19 ini
